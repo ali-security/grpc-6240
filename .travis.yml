@@ -49,9 +49,10 @@ before_install:
   # Recent pods aren't found if we don't explicitly update Cocoapods' repo.
   - travis_wait 20 pod repo update --silent
 install:
-  - pushd $TEST_PATH
-  - travis_wait 30 pod install
-  - popd
+  # - pushd $TEST_PATH
+  # - travis_wait 30 pod install
+  # - popd
+  - pip install -r requirements.txt
 before_script:
   - if [ "${INTEROP_SERVER}" = "true" ]; then
       make interop_server;
@@ -59,12 +60,13 @@ before_script:
       (bins/$CONFIG/interop_server --port=5051 --use_tls &);
     fi
 script:
-  - if [ "${BUILD_ONLY}" = "true" ]; then
-      xctool -workspace "$TEST_PATH/$WORKSPACE" -scheme "$SCHEME"
-      -sdk iphonesimulator9.3 build;
-    else
-      xctool -workspace "$TEST_PATH/$WORKSPACE" -scheme "$SCHEME"
-      -sdk iphonesimulator9.3 test;
-    fi
+  # - if [ "${BUILD_ONLY}" = "true" ]; then
+  #     xctool -workspace "$TEST_PATH/$WORKSPACE" -scheme "$SCHEME"
+  #     -sdk iphonesimulator9.3 build;
+  #   else
+  #     xctool -workspace "$TEST_PATH/$WORKSPACE" -scheme "$SCHEME"
+  #     -sdk iphonesimulator9.3 test;
+  #   fi
+  - python tools/run_tests/run_tests.py -l python
 notifications:
   email: false
