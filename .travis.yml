@@ -47,7 +47,7 @@ before_install:
   - gem install cocoapods -v '1.0.1'
   - pod --version
   # Recent pods aren't found if we don't explicitly update Cocoapods' repo.
-  - pod repo update
+  - pod repo update --silent
 install:
   - pushd $TEST_PATH
   - pod install
