@@ -43,8 +43,8 @@ env:
 before_install:
   # Until Travis upgrades from Cocoapods 0.39, we need to do it here.
   - pod --version
-  - gem uninstall cocoapods -a -y
-  - gem install cocoapods -v '1.2.0'
+  # - gem uninstall cocoapods -a -y
+  # - gem install cocoapods -v '1.2.0'
   - pod --version
   # Recent pods aren't found if we don't explicitly update Cocoapods' repo.
   - travis_wait 20 pod repo update --silent
