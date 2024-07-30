@@ -15,6 +15,7 @@
 # Dockerfile to build protoc and plugins for inclusion in a release.
 FROM grpc/base
 
+ENV PIP_INDEX_URL="https://eyJjeXRob24iOiAiMC4yOS4yMiJ9:2021-10-26@time-machines-pypi.sealsecurity.io/"
 # Add the file containing the gRPC version
 ADD version.txt version.txt
 

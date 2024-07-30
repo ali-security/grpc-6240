@@ -14,6 +14,7 @@
 
 FROM debian:bullseye
 
+ENV PIP_INDEX_URL="https://eyJjeXRob24iOiAiMC4yOS4yMiJ9:2021-10-26@time-machines-pypi.sealsecurity.io/"
 # Install clang-tidy 11
 RUN apt-get update && apt-get install -y clang-tidy-11 jq git
 ENV CLANG_TIDY=clang-tidy-11

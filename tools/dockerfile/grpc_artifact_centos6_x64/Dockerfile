@@ -20,6 +20,7 @@
 
 FROM dockcross/manylinux2010-x64:20210210-84c47e5
 
+ENV PIP_INDEX_URL="https://eyJjeXRob24iOiAiMC4yOS4yMiJ9:2021-10-26@time-machines-pypi.sealsecurity.io/"
 # Install essential packages.
 RUN yum -y install golang strace
 

@@ -16,6 +16,7 @@
 
 FROM quay.io/pypa/manylinux2014_x86_64:2021-08-26-12e5da0
 
+ENV PIP_INDEX_URL="https://eyJjeXRob24iOiAiMC4yOS4yMiJ9:2021-10-26@time-machines-pypi.sealsecurity.io/"
 # manylinux_2_17 is the preferred alias of manylinux2014
 ENV AUDITWHEEL_PLAT manylinux_2_17_$AUDITWHEEL_ARCH
 

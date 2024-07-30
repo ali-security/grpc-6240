@@ -16,6 +16,7 @@
 
 FROM debian:sid
 
+ENV PIP_INDEX_URL="https://eyJjeXRob24iOiAiMC4yOS4yMiJ9:2021-10-26@time-machines-pypi.sealsecurity.io/"
 RUN apt-get update && apt-get install -y debian-keyring && apt-key update
 
 # Install Git and basic packages.

@@ -14,6 +14,7 @@
 
 FROM debian:bullseye
 
+ENV PIP_INDEX_URL="https://eyJjeXRob24iOiAiMC4yOS4yMiJ9:2021-10-26@time-machines-pypi.sealsecurity.io/"
 # Install clang-format
 RUN apt-get update && apt-get install -y clang-format-11
 ENV CLANG_FORMAT=clang-format-11

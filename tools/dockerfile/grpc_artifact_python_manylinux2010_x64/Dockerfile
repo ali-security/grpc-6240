@@ -19,7 +19,7 @@
 # TODO(jtattermusch): Stop building python2.7 wheels.
 FROM quay.io/pypa/manylinux2010_x86_64:2021-02-06-3d322a5
 
-ENV PIP_INDEX_URL="https://eyJjeXRob24iOiAiMC4yOS4yNCJ9:2021-10-26@time-machines-pypi.sealsecurity.io/"
+ENV PIP_INDEX_URL="https://eyJjeXRob24iOiAiMC4yOS4yMiJ9:2021-10-26@time-machines-pypi.sealsecurity.io/"
 
 # TODO(jtattermusch): revisit which of the deps are really required
 RUN yum update -y && yum install -y curl-devel expat-devel gettext-devel linux-headers openssl-devel zlib-devel gcc
